@@ -24,3 +24,12 @@ def playing():
     ask = 'Am I stupid?' #input('[?] What do you want to ask me? >> ')
     print(f'{choice(answers)}, {name}!')
 
+def ask_continue():
+    match input('[?] Again? (+/-) '):
+        case '+':
+            playing()
+        case '-':
+            print('Come back if you have any questions!')
+        case _:
+            print('Something\'s wrong. Don\'t enter it.')
+            ask_continue()
