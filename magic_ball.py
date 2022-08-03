@@ -1,6 +1,8 @@
 from random import choice
 stop = None
 
+#TODO:
+
 answers = ["Undoubtedly", "I think so", "It's not clear yet, try again", "Don't even think about it",
            "It's a foregone conclusion", "Most likely", "Ask me later", "My answer is no",
            "No doubt about it", "Good prospects", "It's better not to tell", "According to my data, no",
