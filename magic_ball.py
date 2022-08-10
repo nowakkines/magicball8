@@ -12,13 +12,10 @@ hi = ['What\'s up', 'I haven\'t seen you in a while', 'Long time no see', 'Wagwa
       'Hiya!', 'Hey! There you are!']
 
 def hello():
-    print('''
-**************************************************
-*      Hello World, I am a magic ball, and       *
-*    I know the answer to any of your questions. *
-*           Just write your question             *
-**************************************************
-        ''')
+    console.print(Panel('''Hello World, I am a magic ball, and
+I know the answer to any of your questions.
+Just write your question!''', title='[yellow]Guessing number'), justify='center')
+
 
 def name():
     global user_name
