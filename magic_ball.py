@@ -19,7 +19,8 @@ Just write your question!''', title='[yellow]Guessing number'), justify='center'
 
 def name():
     global user_name
-    user_name = input('By the way, what\'s your name?: ')
+    console.print('[yellow] -- [i]We would like to know your name[/i] -- [/yellow]')
+    user_name = input('your name: ')
     print(f'{choice(hi)}, {user_name}!\n')
 
 def playing():
