@@ -2,8 +2,8 @@ from random import choice
 from rich.console import Console
 from rich import print
 from rich.panel import Panel
-# from rich.progress import track
-# from time import sleep
+from rich.progress import track
+from time import sleep
 
 stop = None
 console = Console()
@@ -39,6 +39,8 @@ def playing():
         console.print(Panel('Such a short question? From five characters', title='[red]Error'))
         playing()
     else:
+        for _ in track(range(50), description='[green]Processing...'):
+            sleep(0.03)
         console.print(Panel(f'{choice(answers)}, [red]{user_name}[/red]!', title='[yellow]Magic ball 8'))
         ask_continue()
 
