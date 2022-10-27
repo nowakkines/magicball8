@@ -22,5 +22,4 @@
 
 
 <div id="header" align="center">
-"Поколение Python": курс для начинающих
 </div> 
