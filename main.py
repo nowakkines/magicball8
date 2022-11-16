@@ -26,35 +26,43 @@ Just write your question!''', title='[yellow]Magic ball 8'), justify='center')
 
 def name():
     global user_name
-    console.print('[yellow] -- [i]We would like to know your name[/i] -- [/yellow]')
+    console.print(
+        '[yellow] -- [i]We would like to know your name[/i] -- [/yellow]')
     user_name = input('your name: ')
     console.print(Panel(f'{choice(hi)}[red] {user_name}[/red].'))
     playing()
 
 
 def playing():
-    console.print('[yellow] -- [i]What do you want to ask me?[/i] -- [/yellow]')
+    console.print(
+        '[yellow] -- [i]What do you want to ask me?[/i] -- [/yellow]')
     ask = input('your question: ')
     if not is_valid(ask):
-        console.print(Panel('Such a short question? From five characters', title='[red]Error'))
+        console.print(
+            Panel('Such a short question? From five characters', title='[red]Error'))
         playing()
     else:
         for _ in track(range(50), description='[green]Processing...'):
             sleep(0.03)
-        console.print(Panel(f'{choice(answers)}, [red]{user_name}[/red]!', title='[yellow]Magic ball 8'))
+        console.print(Panel(
+            f'{choice(answers)}, [red]{user_name}[/red]!', title='[yellow]Magic ball 8'))
         ask_continue()
+
 
 def is_valid(value):
     return len(value) >= 5
 
+
 def ask_continue():
-     match console.input('[red]don\'t you want to continue? (+/-) [/red]'):
+    match console.input('[red]don\'t you want to continue? (+/-) [/red]'):
         case '+':
             playing()
         case '-':
-            console.print('[blue](͡° ͜ʖ ͡°) Come back if you have any questions! (͡° ͜ʖ ͡°)', justify='center')
+            console.print(
+                '[blue](͡° ͜ʖ ͡°) Come back if you have any questions! (͡° ͜ʖ ͡°)', justify='center')
         case _:
-            console.print(Panel('Something\'s wrong. Don\'t enter it.', title='[red]Error'))
+            console.print(
+                Panel('Something\'s wrong. Don\'t enter it.', title='[red]Error'))
             ask_continue()
 
 
